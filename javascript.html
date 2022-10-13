@@ -23,6 +23,8 @@
       //     }
       //     return returnValue;
       // }
+      // first, the fuction to generate the computer's choice. Because there is 3 possible options, the random scale from 0 to 1 is
+      // split in 3 and every part gets a name to return.
       function getComputerChoice() {
         let randomValue = Math.random();
         if (randomValue < 0.33) {
@@ -33,6 +35,9 @@
           return "scissors";
         }
       }
+
+      // second, the player selection function is created, with the same 3 options and invalid in case of the user using a
+      // diferent input.
 
       function playerSelection(playerValue) {
         if (playerValue === "paper") {
@@ -45,6 +50,8 @@
           return "invalid";
         }
       }
+
+      //
 
       function playRound(playerSelection, computerSelection) {
         playerSelection = playerSelection.toLowerCase();
